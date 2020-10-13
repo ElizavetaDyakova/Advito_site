@@ -1,0 +1,10 @@
+{% extends 'advito/layout.html' %}
+{% block unique_content %}
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <div class="form">
+            {{ form.as_p }}
+        </div>
+        <button class="publih" type="submit">Опубликовать</button>
+    </form>
+{% endblock unique_content %}
